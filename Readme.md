@@ -28,13 +28,21 @@ clone the repository
 ```
     git clone https://github.com/raja-dettex/pipcas
 ```
-```cd pipcas```
+```
+    cd pipcas
+```
 
-```go mod tidy```
+```
+    go mod tidy
+```
 
-```make build```
+```
+    make build
+```
 
-```make run```
+```
+    LISTEN_ADDR=<> LB_ADDR=<> make run
+```
 
 ## Deploy onto a docker cotainer
 
@@ -42,11 +50,15 @@ after cloning the repository as mentioined previously,
 
 Build a Docker image from the Docker file
 
-```docker build -t <your image name> .```
+```
+    docker build -t <your image name> .
+```
 
 Start the docker container from the built image
 
-```docker run -d -p <port to access contiainer process>:<port according to listen address> -e  LISTEN_ADDR=<port> <your image name>000```
+```
+    docker run -d -p <port to access contiainer process>:<port according to listen address> -e  LISTEN_ADDR=<> LB_ADDR=<> <your image name>
+```
 
 ## latest release: 
     pipcas:1.0
